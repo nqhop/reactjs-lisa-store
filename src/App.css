@@ -35,3 +35,8 @@
 .col-full {
     width: 100%;
 }
+
+.col-quarter {
+    background-color: aqua;
+    width: 25%;
+}

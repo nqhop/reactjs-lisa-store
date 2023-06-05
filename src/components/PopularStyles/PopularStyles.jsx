@@ -56,23 +56,23 @@ const PopularStyles = () => {
                     Explore new and popular styles
                 </div>
                 <div className="col col-haft">
-                    <Product width='648px' height='648px' name="Manto" quantity={56} img={popularProduct1} />
+                    <Product width='648px' height='648px' category="Manto" quantity={56} img={popularProduct1} />
                 </div>
                 <div className="col col-haft">
                     <div className="row">
                         <div className="col col-haft">
-                            <Product width='312px' height='312px' name="Pants" quantity={98} img={popularProduct2} sale={true} />
+                            <Product width='312px' height='312px' category="Pants" quantity={98} img={popularProduct2} sale={true} />
                         </div>
                         <div className="col col-haft">
-                            <Product width='312px' height='312px' name="Coat" quantity={26} img={popularProduct3} sale={true} />
+                            <Product width='312px' height='312px' category="Coat" quantity={26} img={popularProduct3} sale={true} />
                         </div>
                     </div>
                     <div className="row">
                         <div className="col col-haft">
-                            <Product width='312px' height='312px' name="Shirt" quantity={45} img={popularProduct4} />
+                            <Product width='312px' height='312px' category="Shirt" quantity={45} img={popularProduct4} />
                         </div>
                         <div className="col col-haft">
-                            <Product width='312px' height='312px' name="Jacket" quantity={76} img={popularProduct5} />
+                            <Product width='312px' height='312px' category="Jacket" quantity={76} img={popularProduct5} />
                         </div>
                     </div>
                 </div>

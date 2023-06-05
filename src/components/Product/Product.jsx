@@ -1,4 +1,7 @@
 import styled from "styled-components"
+import heartIcon from 'assets/icons/heart.svg'
+import searchIcon from 'assets/icons/search.svg'
+import cartWhiteIcon from 'assets/icons/cart-white.svg'
 const StyledProduct = styled.div`
     width: ${props => props.width};
     height: ${props => props.height};
@@ -11,9 +14,9 @@ const StyledProduct = styled.div`
     }
     .product{
         position: relative;
-        visibility: hidden;
+        /* visibility: hidden;
         opacity: 0;
-        transition: visibility 0s, opacity 0.25s linear;
+        transition: visibility 0s, opacity 0.25s linear; */
     }
     .sale{
         width: 52px;
@@ -47,29 +50,71 @@ const StyledProduct = styled.div`
     &:hover .product{
         visibility: visible;
         opacity: 1;
-        
+    }
+
+    .heart-icon,
+    .search-icon,
+    .cart-icon {
+        width: 20px;
+    }
+    .heart-icon {
+        margin-right: 26px;
+    }
+    .cart-icon {
+        margin-right: 18px;
+    }
+    .right-info,
+    .left-info{
+        display: flex;
     }
 `
-const Product = ({ img, width, height, name, quantity, sale }) => {
+const Product = ({ img, width, height, category, quantity, sale }) => {
     return <StyledProduct
         width={width}
         height={height}
     >
         <div className="wrapper">
             <img src={img} alt="" />
-            {sale ? <div className="sale">sale</div> : '' }
-            
+            {sale ? <div className="sale">sale</div> : ''}
+
             <div className="product">
                 <div className="product-info">
-                    <p>{name}</p>
-                    <div>
-                        <span style={{ marginRight: '6px' }}>{quantity}</span>
-                        <span>Product</span>
-                    </div>
+                    {category ?
+                        <>
+                            <p>{category}</p>
+                            <div>
+                                <span style={{ marginRight: '6px' }}>{quantity}</span>
+                                <span>Product</span>
+                            </div>
+                        </>
+                        : <>
+                            <div className="right-info">
+                                <div className="heart-icon">
+                                    <img src={heartIcon} />
+                                </div>
+                                <div className="search-icon">
+                                    <img src={searchIcon} />
+                                </div>
+                            </div>
+                            <div className="left-info">
+                                <div className="cart-icon">
+
+                                    <img src={cartWhiteIcon} />
+                                </div>
+                                <p>Shop Now</p>
+                            </div>
+                        </>
+                    }
+
                 </div>
 
             </div>
         </div>
     </StyledProduct>
+}
+
+Product.degaultProps = {
+    width: '312px',
+    height: '400px'
 }
 export default Product;
