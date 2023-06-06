@@ -1,8 +1,10 @@
 import styled from "styled-components"
 import '../../App.css';
+import '../../assets/css/best-seller-style.css'
 import filterIcon from 'assets/icons/filter.svg'
 import { Button } from "components/Button"
 import Card from "components/Card/Card";
+import { useEffect } from "react";
 
 import producImage1 from 'assets/images/products/image-product.svg'
 import producImage2 from 'assets/images/products/image-product-1.svg'
@@ -12,9 +14,9 @@ import producImage5 from 'assets/images/products/image-product-4.svg'
 import producImage6 from 'assets/images/products/image-product-5.svg'
 import producImage7 from 'assets/images/products/image-product-6.svg'
 import producImage8 from 'assets/images/products/image-product-7.svg'
-const StyledeAllProduct = styled.div`
-    background-color: olive;
-    margin-top: 100px;
+import Swiper from "swiper";
+const StyledBestSellers = styled.div`
+    margin-top: 65%;
     .title{
         font-family: 'Roboto';
         font-style: normal;
@@ -42,16 +44,37 @@ const StyledeAllProduct = styled.div`
         font-size: 16px;
         line-height: 22px;
         color: rgba(0, 0, 0, 0.5);
-        /* identical to box height */
         text-transform: capitalize;
     }
     .active {
         color: #000;
     }
 `
-const AllProduct = () => {
-    return <StyledeAllProduct>
-        <p className="title">Or subscribe to the newsletter</p>
+const BestSellers = () => {
+    useEffect(() => {
+        // const script = document.createElement("script");
+        // script.src = 'https://unpkg.com/swiper@8/swiper-bundle.min.js';
+        // script.async = true;
+        // document.body.appendChild(script);
+
+        console.log('useEffect');
+        let swiper = new Swiper(".mySwiper", {
+            pagination: {
+                el: ".swiper-pagination",
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            slidesPerView: 4,
+            spaceBetween: 30
+        });
+
+    }, [])
+
+    return <StyledBestSellers>
+        {console.log('StyledBestSellers')}
+        <p className="title">Best sellers</p>
         <div className="all-products">
             <div>
                 <span className="chose-product active">all products</span>
@@ -59,7 +82,7 @@ const AllProduct = () => {
                 <span className="chose-product">hoodies</span>
                 <span className="chose-product">jacket</span>
             </div>
-            <Button icon={filterIcon} bgColor='#000' borderRadius='0' textColor='#fff' width='100px' height='32px'>Filter</Button>
+            <Button bgColor='#000' borderRadius='0' textColor='#fff' width='100px' height='32px'>Show All</Button>
         </div>
         <div className="row mt-28">
             <div className="col col-quarter">
@@ -76,21 +99,23 @@ const AllProduct = () => {
             </div>
         </div>
 
-        <div className="row">
-            <div className="col col-quarter">
-                <Card img={producImage1} price='63.85' categoty='dress' name='Adicolor Classics Joggers' />
-            </div>
-            <div className="col col-quarter">
-                <Card img={producImage1} price='63.85' categoty='dress' name='Adicolor Classics Joggers' />
-            </div>
-            <div className="col col-quarter">
-                <Card img={producImage1} price='63.85' categoty='dress' name='Adicolor Classics Joggers' />
-            </div>
-            <div className="col col-quarter">
-                <Card img={producImage1} price='63.85' categoty='dress' name='Adicolor Classics Joggers' />
+        <div className="container">
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide slide_1">Slide 1</div>
+                    <div class="swiper-slide slide_2">Slide 2</div>
+                    <div class="swiper-slide slide_3">Slide 3</div>
+                    <div class="swiper-slide slide_4">Slide 4</div>
+                    <div class="swiper-slide slide_5">Slide 5</div>
+                    <div class="swiper-slide slide_5">Slide 6</div>
+                    <div class="swiper-slide slide_5">Slide 7</div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
             </div>
         </div>
+    </StyledBestSellers>
 
-    </StyledeAllProduct>
 }
-export default AllProduct;
+export default BestSellers;

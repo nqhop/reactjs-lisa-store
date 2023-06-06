@@ -14,9 +14,9 @@ const StyledProduct = styled.div`
     }
     .product{
         position: relative;
-        /* visibility: hidden;
+        visibility: hidden;
         opacity: 0;
-        transition: visibility 0s, opacity 0.25s linear; */
+        transition: visibility 0s, opacity 0.25s linear;
     }
     .sale{
         width: 52px;

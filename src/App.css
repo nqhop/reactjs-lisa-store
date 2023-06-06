@@ -37,6 +37,8 @@
 }
 
 .col-quarter {
-    background-color: aqua;
     width: 25%;
 }
+ .mt-28 {
+    margin-top: 28px;
+ }

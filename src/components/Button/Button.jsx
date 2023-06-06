@@ -13,10 +13,12 @@ const StyledButton = styled.button`
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: center;
+
     font-family: 'Roboto';
-    div{
+    /* div{
         padding: 5px 15px;
-    }
+    } */
 `
 
 export const Button = ({ width, height, textColor, bgColor, boderColor, icon, marginRightIcon, borderRadius, fontSize, children }) => {
