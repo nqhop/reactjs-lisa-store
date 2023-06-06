@@ -14,7 +14,12 @@ import producImage5 from 'assets/images/products/image-product-4.svg'
 import producImage6 from 'assets/images/products/image-product-5.svg'
 import producImage7 from 'assets/images/products/image-product-6.svg'
 import producImage8 from 'assets/images/products/image-product-7.svg'
-import Swiper from "swiper";
+// import Swiper from "swiper";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation } from "swiper";
+import 'swiper/css';
+
+// import Swiper from "swiper";
 const StyledBestSellers = styled.div`
     margin-top: 65%;
     .title{
@@ -57,25 +62,24 @@ const BestSellers = () => {
         // script.async = true;
         // document.body.appendChild(script);
 
-        console.log('useEffect');
-        
+        // console.log('useEffect');
+
     }, [])
 
-    let swiper = new Swiper(".mySwiper", {
-        pagination: {
-            el: ".swiper-pagination",
-        },
-        // navigation: {
-        //     // nextEl: ".swiper-button-next",
-        //     // prevEl: ".swiper-button-prev",
-        // },
-        slidesPerView: 4,
-        spaceBetween: 30
-    });
+    // let swiper = new Swiper(".mySwiper", {
+    //     pagination: {
+    //         el: ".swiper-pagination",
+    //     },
+    //     navigation: {
+    //         // nextEl: ".swiper-button-next",
+    //         // prevEl: ".swiper-button-prev",
+    //     },
+    //     slidesPerView: 4,
+    //     spaceBetween: 30
+    // });
 
 
     return <StyledBestSellers>
-        {console.log('StyledBestSellers')}
         <p className="title">Best sellers</p>
         <div className="all-products">
             <div>
@@ -86,7 +90,7 @@ const BestSellers = () => {
             </div>
             <Button bgColor='#000' borderRadius='0' textColor='#fff' width='100px' height='32px'>Show All</Button>
         </div>
-        <div className="row mt-28">
+        {/* <div className="row mt-28">
             <div className="col col-quarter">
                 <Card img={producImage1} price='63.85' categoty='dress' name='Adicolor Classics Joggers' />
             </div>
@@ -99,25 +103,37 @@ const BestSellers = () => {
             <div className="col col-quarter">
                 <Card img={producImage1} price='63.85' categoty='dress' name='Adicolor Classics Joggers' />
             </div>
-        </div>
+        </div> */}
 
         <div className="container">
-            <div class="swiper mySwiper">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide slide_1">Slide 1</div>
-                    <div class="swiper-slide slide_2">Slide 2</div>
-                    <div class="swiper-slide slide_3">Slide 3</div>
-                    <div class="swiper-slide slide_4">Slide 4</div>
-                    <div class="swiper-slide slide_5">Slide 5</div>
-                    <div class="swiper-slide slide_5">Slide 6</div>
-                    <div class="swiper-slide slide_5">Slide 7</div>
-                </div>
-                <div class="swiper-pagination"></div>
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
-            </div>
+            <Swiper
+                spaceBetween={20}
+                slidesPerView={4}
+                navigation={true}
+                modules={[Navigation]}
+                onSlideChange={() => console.log('slide change')}
+                onSwiper={(swiper) => console.log(swiper)}
+            >
+                <SwiperSlide>
+                    <Card img={producImage1} price='63.85' categoty='dress' name='Adicolor Classics Joggers' />
+                </SwiperSlide>
+                <SwiperSlide>
+                    <Card img={producImage1} price='63.85' categoty='dress' name='Adicolor Classics Joggers' />
+                </SwiperSlide>
+                <SwiperSlide>
+                    <Card img={producImage1} price='63.85' categoty='dress' name='Adicolor Classics Joggers' />
+                </SwiperSlide>
+                <SwiperSlide>
+                    <Card img={producImage1} price='63.85' categoty='dress' name='Adicolor Classics Joggers' />
+                </SwiperSlide>
+                <SwiperSlide>
+                    <Card img={producImage1} price='63.85' categoty='dress' name='Adicolor Classics Joggers' />
+                </SwiperSlide>
+                <SwiperSlide>
+                    <Card img={producImage1} price='63.85' categoty='dress' name='Adicolor Classics Joggers' />
+                </SwiperSlide>
+            </Swiper>
         </div>
     </StyledBestSellers>
-
 }
 export default BestSellers;

@@ -1,35 +1,7 @@
 /* Import google font (Balsamiq Sans) */
-@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap'); */
 
 @import url('https://unpkg.com/swiper@8/swiper-bundle.min.css');
-
-/* Box sizing rules */
-/* *,
-*::before,
-*::after {
-    box-sizing: border-box;
-}
-
-
-* {
-    padding: 0;
-    margin: 0;
-} */
-
-
-/* html,
-body {
-    position: relative;
-    height: 100%;
-} */
-
-
-/* body {
-    font-family: 'Balsamiq Sans', cursive, "Roboto Mono";
-    font-size: 1.2rem;
-    text-align: justify;
-} */
-
 
 .container {
     /* display: grid;
@@ -41,7 +13,7 @@ body {
 .container>div {
     /* top: 25vh; */
     /* width: 312px; */
-    height: 400px;
+    /* height: 400px; */
 }
 
 /* Swiper container stylng */
@@ -54,7 +26,7 @@ body {
 
 
 .swiper-slide {
-    text-align: center;
+    /* text-align: center; */
     /* Center slide text vertically */
     display: -webkit-box;
     display: -ms-flexbox;
@@ -78,37 +50,7 @@ body {
     object-fit: cover;
 }
 
-
-.slide_1 {
-    background-color: #643ca3;
-}
-
-
-.slide_2 {
-    background-color: #e38364;
-}
-
-
-.slide_3 {
-    background-color: #faf47a;
-}
-
-
-.slide_4 {
-    background-color: #64e3c1;
-}
-
-
-.slide_5 {
-    background-color: #9e6ffd;
-}
-
 .swiper-button-next,
 .swiper-button-prev {
    outline: none;
 }
-
-
-/* div.swiper-button-next, div.swiper-button-prev {
-  top: 70%
-} */
