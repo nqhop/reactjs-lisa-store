@@ -4,53 +4,31 @@
 @import url('https://unpkg.com/swiper@8/swiper-bundle.min.css');
 
 /* Box sizing rules */
-*,
+/* *,
 *::before,
 *::after {
     box-sizing: border-box;
 }
 
 
-/* Remove default padding and margin */
 * {
     padding: 0;
     margin: 0;
-}
+} */
 
 
-/* Default anchor tag styling */
-a {
-    text-decoration: none;
-    color: black;
-}
-
-
-a:hover {
-    cursor: pointer;
-}
-
-
-/* Default image styling */
-img {
-    padding: 1rem;
-    max-width: 75%;
-    height: auto;
-}
-
-
-/* Body styling */
-html,
+/* html,
 body {
     position: relative;
     height: 100%;
-}
+} */
 
 
-body {
+/* body {
     font-family: 'Balsamiq Sans', cursive, "Roboto Mono";
     font-size: 1.2rem;
     text-align: justify;
-}
+} */
 
 
 .container {
@@ -65,25 +43,6 @@ body {
     /* width: 312px; */
     height: 400px;
 }
-
-
-div.project_content {
-    padding-top: 25vh;
-    justify-items: center;
-    align-items: center;
-}
-
-.project_content h1,
-h2,
-p {
-    padding: 0.2rem 1rem;
-}
-
-
-.project_container img {
-    height: 75%;
-}
-
 
 /* Swiper container stylng */
 .swiper {

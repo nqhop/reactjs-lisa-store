@@ -58,19 +58,21 @@ const BestSellers = () => {
         // document.body.appendChild(script);
 
         console.log('useEffect');
-        let swiper = new Swiper(".mySwiper", {
-            pagination: {
-                el: ".swiper-pagination",
-            },
-            navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
-            },
-            slidesPerView: 4,
-            spaceBetween: 30
-        });
-
+        
     }, [])
+
+    let swiper = new Swiper(".mySwiper", {
+        pagination: {
+            el: ".swiper-pagination",
+        },
+        // navigation: {
+        //     // nextEl: ".swiper-button-next",
+        //     // prevEl: ".swiper-button-prev",
+        // },
+        slidesPerView: 4,
+        spaceBetween: 30
+    });
+
 
     return <StyledBestSellers>
         {console.log('StyledBestSellers')}
