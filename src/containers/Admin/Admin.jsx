@@ -1,65 +1,37 @@
-import { UploadOutlined, UserOutlined, VideoCameraOutlined } from '@ant-design/icons';
-import { Layout, Menu, theme } from 'antd';
-import React from 'react';
-const { Header, Content, Footer, Sider } = Layout;
+import styled from 'styled-components';
+import SideMenu from 'adminComponents/SlideMenu';
+import PageContent from 'adminComponents/PageContent';
+const StyledAdmin = styled.div`
+    display: flex;
+    .sidebar {
+        height: 100vh;
+        width: 200px;
+        background-color: #ddd;
+    }
+    .main {
+        height: 100vh;
+        flex: 1;
+        background-color: #b8dfdf;
+    }
+    .header {
+        height: 100px;
+        background-color: #d7d7a2;
+    }
+`
 const Admin = () => {
-    return (
-        <Layout>
-            <Sider
-                breakpoint="lg"
-                collapsedWidth="0"
-                onBreakpoint={(broken) => {
-                    console.log(broken);
-                }}
-                onCollapse={(collapsed, type) => {
-                    console.log(collapsed, type);
-                }}
-            >
-                <div className="demo-logo-vertical" />
-                <Menu
-                    theme="dark"
-                    mode="inline"
-                    defaultSelectedKeys={['4']}
-                    items={[UserOutlined, VideoCameraOutlined, UploadOutlined, UserOutlined].map(
-                        (icon, index) => ({
-                            key: String(index + 1),
-                            icon: React.createElement(icon),
-                            label: `nav ${index + 1}`,
-                        }),
-                    )}
-                />
-            </Sider>
-            <Layout>
-                <Header
-                    style={{
-                        padding: 0,
-                        // background: colorBgContainer,
-                    }}
-                />
-                <Content
-                    style={{
-                        margin: '24px 16px 0',
-                    }}
-                >
-                    <div
-                        style={{
-                            padding: 24,
-                            minHeight: 360,
-                            // background: colorBgContainer,
-                        }}
-                    >
-                        content
-                    </div>
-                </Content>
-                <Footer
-                    style={{
-                        textAlign: 'center',
-                    }}
-                >
-                    Ant Design ©2023 Created by Ant UED
-                </Footer>
-            </Layout>
-        </Layout>
-    )
+    return <StyledAdmin>
+        <div className='sidebar'>
+            <SideMenu/>
+        </div>
+        <div className='main'>
+            <div className='header'>
+
+            </div>
+
+            <div className='page-content'>
+                <PageContent/>
+            </div>
+        </div>
+    </StyledAdmin>
 }
 export default Admin;
