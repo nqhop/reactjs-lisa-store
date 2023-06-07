@@ -8,11 +8,17 @@ import flowerImage2 from 'assets/images/flower2.svg'
 
 const StyledCollections = styled.div`
     height: 760px;
-    position: absolute;
+    /* position: absolute;
     left: 0;
-    right: 0;
-    /* background-color: gray; */
-    padding: 120px 300px 50px;
+    right: 0; */
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    background-color: #c9e5f1;
+    padding: 120px 16px 50px;
+    .wrapper {
+        max-width: 1320px;
+        margin: 0 auto;
+    }
 
     .collections {
         position: relative;
@@ -34,6 +40,7 @@ const StyledCollections = styled.div`
         line-height: 55px;
         text-transform: capitalize;
         max-width: 680px;
+        width: 50%;
         margin-top: 52px;
     }
     .collection-image{
@@ -59,6 +66,47 @@ const StyledCollections = styled.div`
             width: 100%;
         }   
     }
+    .shop-now-btn {
+        margin-top: 40px;
+    }
+    .small-btn {
+        display: none;
+    }
+    /*
+    min-width
+    mobileS: '320px',
+    mobileM: '375px',
+    mobileL: '425px',
+    tablet: '768px',
+    laptop: '1024px',
+    laptopL: '1440px',
+    desktop: '2560px', */
+    @media screen and (max-width: 865px) {
+        .collection-image,
+        .collection-iamge-background{
+            display: none;
+        }
+        .collections-stytle {
+            font-size: 30px;
+        }
+        .collections-desc{
+            font-size: 20px;
+            margin-top: 12px;
+            line-height: 30px;
+            width: 100%;
+        }
+        .shop-now-btn {
+            margin-top: 16px;
+        }
+        .nomal-btn {
+            display: none;
+        }
+        .small-btn {
+            display: block;
+        }
+        padding: 30px;
+        height: auto;
+    }
 `
 const StyledFlower1 = styled.div`
     position: absolute;
@@ -74,22 +122,33 @@ const StyledFlower2 = styled.div`
 const Collections = () => {
     return <>
         <StyledCollections>
-            <div className="collections">
-                <p className="collections-stytle">Collections</p>
-                <div className="collections-desc">
-                    <span >you can explore ans shop many differnt collection
-                        from various barands here.</span>
-                </div>
-                <Button width='223px' height='72px' textColor='#fff' bgColor='#1E2832' borderRadius='0px' fontSize='29px' icon={cartWhiteIcon}>Shop Now</Button>
-                <ShopNowButton />
+            <div className="wrapper">
 
-                <div className="collection-image">
-                    <img src={collectionImage} alt="" />
-                </div>
-                <div className="collection-iamge-background">
-                    <img src={collectionImageBackground} alt="" />
+                <div className="collections">
+                    <p className="collections-stytle">Collections</p>
+                    <div className="collections-desc">
+                        <span >you can explore ans shop many differnt collection
+                            from various barands here.</span>
+                    </div>
+                    <div className="shop-now-btn">
+                        <div className="nomal-btn">
+                            <Button width='223px' height='72px' textColor='#fff' bgColor='#1E2832' borderRadius='0px' fontSize='29px' icon={cartWhiteIcon}>Shop Now</Button>
+                        </div>
+                        <div className='small-btn'>
+                            <Button width='120px' height='40px' textColor='#fff' bgColor='#1E2832' borderRadius='0px' fontSize='20px'>Shop Now</Button>
+                        </div>
+                    </div>
+                    {/* <ShopNowButton /> */}
+
+                    <div className="collection-image">
+                        <img src={collectionImage} alt="" />
+                    </div>
+                    <div className="collection-iamge-background">
+                        <img src={collectionImageBackground} alt="" />
+                    </div>
                 </div>
             </div>
+
         </StyledCollections>
         <StyledFlower1>
             <img className="flower" src={flowerImage} alt="" />

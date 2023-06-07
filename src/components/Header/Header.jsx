@@ -9,7 +9,7 @@ const StyledHeader = styled.div`
     display: flex;
     background-color: #9ccaf5;
     justify-content: space-between;
-    /* align-items: center; */
+    align-items: center;
     height: 90px;
     padding: 0 8px;
     border-bottom: #E3E3E3 solid 1px;
@@ -26,6 +26,11 @@ const StyledHeader = styled.div`
         flex-direction: row;
         .account-btn {
             margin-right: 24px;
+        }
+    }
+    @media screen and (max-width: 470px){
+        .store-name {
+            display: none;
         }
     }
 `

@@ -9,10 +9,10 @@ import '../../App.css';
 const StyledFooter = styled.div`
     background-color: #638497;
     position: absolute;
-    bottom: -1178px;
     left: 0;
     right: 0;
-    margin-top: 700px;
+    /* bottom: -1178px; */
+    /* margin-top: 700px; */
     .footer-top {
         max-width: 1320px;
         margin: 0 auto;

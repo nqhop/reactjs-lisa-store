@@ -7,6 +7,7 @@ import CollectionsTwo from "components/CollectionsTwo/CollectionsTwo"
 import BestSellers from "components/BestSellers/BestSellers"
 import FollowAndDiscounts from "components/FollowAndDiscounts/FollowAndDiscounts"
 import Footer from "components/Footer/Footer"
+import DemoReactResponsive from "components/DemoReactResponsive/DemoReactResponsive"
 const StyledHome = styled.div`
     
 
@@ -21,6 +22,7 @@ export const Home = () => {
         <CollectionsTwo/>
         <BestSellers/>
         <FollowAndDiscounts/>
+        <DemoReactResponsive/>
         <Footer/>
 
     </StyledHome>
