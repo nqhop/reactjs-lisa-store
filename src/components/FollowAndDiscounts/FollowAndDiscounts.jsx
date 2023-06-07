@@ -31,8 +31,8 @@ const StyledFollowAndDiscounts = styled.div`
         margin: 0 auto;
         margin-top: 60px;
         display: flex;
-        float: left;
-        flex-wrap: wrap;
+        /* float: left; */
+        /* flex-wrap: wrap; */
         justify-content: space-between;
     }
     .official{
@@ -67,35 +67,35 @@ const StyledFollowAndDiscounts = styled.div`
 const FollowAndDiscounts = () => {
     return <StyledFollowAndDiscounts>
         <p className="title">Follow products and discounts on Instagram</p>
-        {/* <div className="listImg">
+        <div className="listImg">
             <img src={FollowAndDiscount1} alt="" />
             <img src={FollowAndDiscount2} alt="" />
             <img src={FollowAndDiscount3} alt="" />
             <img src={FollowAndDiscount4} alt="" />
             <img src={FollowAndDiscount5} alt="" />
             <img src={FollowAndDiscount6} alt="" />
-        </div> */}
-
-        <div className="listImg">
-            <div className="img-item">
-                <img src={FollowAndDiscount1} alt="" />
-            </div>
-            <div className="img-item">
-                <img src={FollowAndDiscount1} alt="" />
-            </div>
-            <div className="img-item">
-                <img src={FollowAndDiscount1} alt="" />
-            </div>
-            <div className="img-item">
-                <img src={FollowAndDiscount1} alt="" />
-            </div>
-            <div className="img-item">
-                <img src={FollowAndDiscount1} alt="" />
-            </div>
-            <div className="img-item">
-                <img src={FollowAndDiscount1} alt="" />
-            </div>
         </div>
+
+        {/* <div className="listImg">
+            <div className="img-item">
+                <img src={FollowAndDiscount1} alt="" />
+            </div>
+            <div className="img-item">
+                <img src={FollowAndDiscount1} alt="" />
+            </div>
+            <div className="img-item">
+                <img src={FollowAndDiscount1} alt="" />
+            </div>
+            <div className="img-item">
+                <img src={FollowAndDiscount1} alt="" />
+            </div>
+            <div className="img-item">
+                <img src={FollowAndDiscount1} alt="" />
+            </div>
+            <div className="img-item">
+                <img src={FollowAndDiscount1} alt="" />
+            </div>
+        </div> */}
         <p className="official">@lisa.official</p>
     </StyledFollowAndDiscounts>
 }
