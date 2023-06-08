@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 import SideMenu from 'adminComponents/SlideMenu';
 import PageContent from 'adminComponents/PageContent';
+import { Route } from 'react-router-dom';
+import Dashboard from './Dashboard';
 const StyledAdmin = styled.div`
     display: flex;
     .sidebar {
@@ -29,7 +31,8 @@ const Admin = () => {
             </div>
 
             <div className='page-content'>
-                <PageContent/>
+                {/* <PageContent/> */}
+                <Route path="/admin" element={<Dashboard/>}/>
             </div>
         </div>
     </StyledAdmin>

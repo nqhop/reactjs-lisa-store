@@ -27,12 +27,12 @@ const StyledFollowAndDiscounts = styled.div`
         text-transform: capitalize;
     }
     .listImg {
-        min-width: 1320px;
+        width: 100%;
         margin: 0 auto;
         margin-top: 60px;
         display: flex;
-        /* float: left; */
-        /* flex-wrap: wrap; */
+        float: left;
+        flex-wrap: wrap;
         justify-content: space-between;
     }
     .official{
@@ -51,13 +51,6 @@ const StyledFollowAndDiscounts = styled.div`
         /* Primary */
         color: #FF6F61;
     }
-    .img-item {
-        width: 200px;
-        height: 200px;
-        img {
-            width: 100%;
-        }
-    }
     @media (max-width: 768px){
         .title {
             font-size: 36px;
@@ -75,27 +68,6 @@ const FollowAndDiscounts = () => {
             <img src={FollowAndDiscount5} alt="" />
             <img src={FollowAndDiscount6} alt="" />
         </div>
-
-        {/* <div className="listImg">
-            <div className="img-item">
-                <img src={FollowAndDiscount1} alt="" />
-            </div>
-            <div className="img-item">
-                <img src={FollowAndDiscount1} alt="" />
-            </div>
-            <div className="img-item">
-                <img src={FollowAndDiscount1} alt="" />
-            </div>
-            <div className="img-item">
-                <img src={FollowAndDiscount1} alt="" />
-            </div>
-            <div className="img-item">
-                <img src={FollowAndDiscount1} alt="" />
-            </div>
-            <div className="img-item">
-                <img src={FollowAndDiscount1} alt="" />
-            </div>
-        </div> */}
         <p className="official">@lisa.official</p>
     </StyledFollowAndDiscounts>
 }
