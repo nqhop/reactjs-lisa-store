@@ -1,12 +1,13 @@
 import './App.css';
 import Home from 'containers/Home';
-import Admin from 'containers/Admin/Admin';
 import { Routes, Route } from 'react-router-dom';
 import styled from 'styled-components';
-import SideMenu from 'adminComponents/SlideMenu';
-import PageContent from 'adminComponents/PageContent';
 
+
+import SideMenu from 'adminComponents/SlideMenu';
+import AdminHeader from 'adminComponents/AdminHeader/AdminHeader';
 import Dashboard from 'containers/Admin/Dashboard';
+
 const StyledAdmin = styled.div`
     display: flex;
     .sidebar {
@@ -18,41 +19,45 @@ const StyledAdmin = styled.div`
         height: 100vh;
         flex: 1;
         background-color: #b8dfdf;
+        max-width: 1300px;
+        margin: 0 auto;
     }
-    .header {
-        height: 100px;
-        background-color: #d7d7a2;
+    .page-content {
+        padding: 30px 50px;
     }
 `
 function App() {
     return (
-        <Routes>
-            <Route path='/' element={
-                <div className='wrapper'>
-                    <div className="App">
-                        <Home />
+        <>
+            <Routes>
+                <Route path='/' element={
+                    <div className='wrapper'>
+                        <div className="App">
+                            <Home />
+                        </div>
                     </div>
-                </div>
-            } />
+                } />
+            </Routes>
 
-            {/* <StyledAdmin>
+
+            <StyledAdmin>
                 <div className='sidebar'>
                     <SideMenu />
                 </div>
                 <div className='main'>
-                    <div className='header'>
-
-                    </div>
+                    <AdminHeader />
 
                     <div className='page-content'>
-                        <Route path="/admin" element={<Dashboard />} />
+                        <Routes>
+                            <Route path="/admin" element={<Dashboard />} />
+                        </Routes>
                     </div>
                 </div>
-            </StyledAdmin> */}
+            </StyledAdmin>
 
 
-        </Routes>
 
+        </>
     );
 }
 
