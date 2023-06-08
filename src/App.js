@@ -57,20 +57,3 @@ function App() {
 }
 
 export default App;
-
-const MyAdmin = () => {
-    return <StyledAdmin>
-        <div className='sidebar'>
-            <SideMenu />
-        </div>
-        <div className='main'>
-            <div className='header'>
-
-            </div>
-
-            <div className='page-content'>
-                <PageContent />
-            </div>
-        </div>
-    </StyledAdmin>
-}
