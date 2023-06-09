@@ -38,23 +38,27 @@ function App() {
                         </div>
                     </div>
                 } />
+
+                <Route path='/admin' element={
+                    <StyledAdmin>
+                        <div className='sidebar'>
+                            <SideMenu />
+                        </div>
+                        <div className='main'>
+                            <AdminHeader />
+
+                            <div className='page-content'>
+                                <Routes>
+                                    <Route path="/" element={<Dashboard />} />
+                                </Routes>
+                            </div>
+                        </div>
+                    </StyledAdmin>
+                }>
+
+                </Route>
             </Routes>
 
-
-            <StyledAdmin>
-                <div className='sidebar'>
-                    <SideMenu />
-                </div>
-                <div className='main'>
-                    <AdminHeader />
-
-                    <div className='page-content'>
-                        <Routes>
-                            <Route path="/admin" element={<Dashboard />} />
-                        </Routes>
-                    </div>
-                </div>
-            </StyledAdmin>
 
 
 
