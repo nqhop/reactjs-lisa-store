@@ -5,7 +5,7 @@ import threeDotIcon from 'assets/admin/icons/three-dot.svg'
 import avatar1 from 'assets/admin/images/avatar.svg'
 const StyledHeader = styled.div`
     height: 100px;
-    background-color: #d7d7a2;
+    /* background-color: #d7d7a2; */
     padding: 0 50px;
     display: flex;
     flex-direction: row;

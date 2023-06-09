@@ -10,15 +10,16 @@ import Dashboard from 'containers/Admin/Dashboard';
 
 const StyledAdmin = styled.div`
     display: flex;
+    background-color: #b8dfdf;
     .sidebar {
-        height: 100vh;
+        /* height: 100vh; */
         width: 200px;
-        background-color: #ddd;
+        background-color: #fff;
     }
     .main {
-        height: 100vh;
+        /* height: 100vh; */
         flex: 1;
-        background-color: #b8dfdf;
+        /* background-color: #b8dfdf; */
         max-width: 1300px;
         margin: 0 auto;
     }
